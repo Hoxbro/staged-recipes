@@ -17,11 +17,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python
     - pip
   run:
-    - python >=3.8
-    - triton >=2.0.0,<3  # [linux-64]
+    - python
+    - triton >=2.0.0,<3  # [linux64]
     - numba
     - numpy
     - pytorch
