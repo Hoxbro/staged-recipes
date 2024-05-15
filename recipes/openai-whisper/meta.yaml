@@ -22,13 +22,14 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - triton >=2.0.0,<3
+    - triton >=2.0.0,<3  # [linux-64]
     - numba
     - numpy
     - pytorch
     - tqdm
     - more-itertools
     - tiktoken
+    - ffmpeg
 
 test:
   imports:
