@@ -12,7 +12,7 @@ source:
 build:
   entry_points:
     - whisper=whisper.transcribe:cli
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv --no-deps
   number: 0
 
 requirements:
@@ -22,14 +22,13 @@ requirements:
   run:
     - python
     - numba
+    - triton >=2.0.0,<3  # [linux64]
     - numpy
     - pytorch
     - tqdm
     - more-itertools
     - tiktoken
     - ffmpeg
-  run_constrained:
-    - triton >=2.0.0,<3  # [linux64]
 
 test:
   imports:
