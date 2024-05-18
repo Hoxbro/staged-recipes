@@ -21,7 +21,6 @@ requirements:
     - pip
   run:
     - python
-    - triton >=2.0.0,<3  # [linux64]
     - numba
     - numpy
     - pytorch
@@ -29,6 +28,8 @@ requirements:
     - more-itertools
     - tiktoken
     - ffmpeg
+  run_constrained:
+    - triton >=2.0.0,<3  # [linux64]
 
 test:
   imports:
