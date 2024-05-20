@@ -23,13 +23,14 @@ requirements:
   run:
     - python
     - numba
-    - triton >=2.0.0,<3  # [linux64]
     - numpy
     - pytorch
     - tqdm
     - more-itertools
     - tiktoken
     - ffmpeg
+  run_constrained:
+    - triton >=2.0.0,<3
 
 test:
   imports:
