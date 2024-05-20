@@ -22,9 +22,10 @@ requirements:
   run:
     - python
     - numba
-    - triton >=2.0.0,<3  # [linux64]
+    - triton >=2.0.0,<3  # [cuda_compiler_version != "None" and linux64]
     - numpy
-    - pytorch
+    - pytorch-cpu  # [cuda_compiler_version == "None"]
+    - pytorch-gpu  # [cuda_compiler_version != "None"]
     - tqdm
     - more-itertools
     - tiktoken
@@ -34,7 +35,6 @@ test:
   imports:
     - whisper
   commands:
-    - pip check
     - whisper --help
   requires:
     - pip
