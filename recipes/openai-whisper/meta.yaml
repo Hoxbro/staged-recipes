@@ -31,6 +31,10 @@ requirements:
     - tiktoken
     - ffmpeg
     - triton >=2.0.0  # [linux64]
+  run_constrained:
+    # Let the run_export from pytorch take effect
+    # so put their requirement here
+    - pytorch >=2.3.1
 
 test:
   imports:
