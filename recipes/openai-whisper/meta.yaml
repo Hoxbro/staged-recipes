@@ -24,7 +24,8 @@ requirements:
     - python
     - numba
     - numpy
-    - pytorch
+    - pytorch  # [not linux64]
+    - pytorch =*=cuda*  # [linux64]
     - tqdm
     - more-itertools
     - tiktoken
